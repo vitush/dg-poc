@@ -1,0 +1,7 @@
+
+
+protoc --proto_path=api/proto --go_out=plugins=grpc:pkg/api dmap.proto
+
+cd cmd/server/
+go build .
+./server -port 8081
